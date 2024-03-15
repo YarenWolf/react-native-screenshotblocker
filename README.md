@@ -12,6 +12,7 @@ A Native library for blocking screenshot for react-native developer, with backgr
 https://github.com/gbumps/react-native-screenshotblocker
 
 
+
 # Get started
 
 <!--ts-->

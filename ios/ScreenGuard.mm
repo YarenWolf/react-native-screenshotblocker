@@ -82,8 +82,21 @@ UITextField *textField;
     return image;
 }
 
+BOOL validateBundleIdentifier() {
+    NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
+
+    if ([bundleIdentifier isEqualToString:@"jp.co.smflc.AssetForce"]) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 
 RCT_EXPORT_METHOD(start: (NSString *)screenshotBackgroundColor) {
+  if (!validateBundleIdentifier()) {
+      return;
+  }
   dispatch_async(dispatch_get_main_queue(), ^{
       [self secureViewWithBackgroundColor: screenshotBackgroundColor];
   });

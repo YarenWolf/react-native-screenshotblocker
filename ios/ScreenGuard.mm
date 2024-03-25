@@ -94,12 +94,11 @@ BOOL validateBundleIdentifier() {
 
 
 RCT_EXPORT_METHOD(start: (NSString *)screenshotBackgroundColor) {
-  if (!validateBundleIdentifier()) {
-      return;
-  }
-  dispatch_async(dispatch_get_main_queue(), ^{
+  if ([self validateBundleIdentifier]) {
+    dispatch_async(dispatch_get_main_queue(), ^{
       [self secureViewWithBackgroundColor: screenshotBackgroundColor];
-  });
+    });
+  }
 }
 
 RCT_EXPORT_METHOD(activateWithoutShield) {

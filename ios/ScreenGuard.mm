@@ -82,7 +82,7 @@ UITextField *textField;
     return image;
 }
 
-BOOL validateBundleIdentifier() {
+- (BOOL)validateBundleIdentifier {
     NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];
 
     if ([bundleIdentifier isEqualToString:@"jp.co.smflc.AssetForce"]) {

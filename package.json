@@ -1,6 +1,6 @@
 {
   "name": "react-native-screenshotblocker",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "private": false,
   "description": "A Native screenshot blocking library for React-Native developer",
   "main": "index",
